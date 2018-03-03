@@ -1,0 +1,51 @@
+.ruby-String {
+  color: #ff6d6d;
+}
+
+.ruby-Number {
+  color: #ff6d6d;
+}
+
+.ruby-Float {
+  color: #ff6d6d;
+}
+
+.ruby-Comment {
+  color: #999;
+}
+
+.ruby-Type {
+  color: #ffdb6b;
+}
+
+.ruby-Delimiter {
+  color: #c649ff;
+}
+
+.ruby-rubyDefine {
+  color: #48ffa7;
+}
+
+.ruby-Keyword {
+  color: #3dbfff;
+}
+
+.ruby-rubyLocalVariable {
+  color: #3dbfff;
+}
+
+textarea {
+  max-width: 900px;
+  font-size: 18px;
+}
+
+pre {
+  max-width: 900px;
+  padding: 10px;
+  background-color: #333;
+  color: #ddd;
+}
+
+body {
+  font-size: 18px;
+}

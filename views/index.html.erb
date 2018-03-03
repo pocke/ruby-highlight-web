@@ -1,0 +1,35 @@
+<h1>Ruby Highlight</h1>
+
+<textarea id="ruby-code" rows="30" cols="100">
+def hello(name)
+  puts "Hello, #{name}"
+end
+
+hello('your name')
+</textarea>
+
+<link rel="stylesheet" href="/sample.css" type="text/css" charset="utf-8">
+
+<button onClick="highlight()">Highlight</button>
+
+<pre><code id="highlight-area"></code></pre>
+
+<script type="text/javascript">
+function highlight() {
+  const content = document.querySelector('#ruby-code').value;
+
+  fetch('/highlight', {
+    method: 'POST',
+    headers: {
+      'Accept': 'text/plain',
+      'Content-Type': 'text/plain',
+    },
+    body: content,
+  }).then(res => res.text())
+    .then(text => {
+      const el = document.querySelector('#highlight-area');
+      el.innerHTML = text;
+    }).catch(err => alert(err));
+}
+highlight();
+</script>
